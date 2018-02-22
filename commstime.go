@@ -1,4 +1,4 @@
-package commstime // import "pkg.space/commstime"
+package commstime
 
 func prefix(cin, cout chan int, v int) {
 	cout <- v
@@ -15,7 +15,7 @@ func id(cin, cout chan int) {
 
 func delta(cin, cout1, cout2 chan int) {
 	for v := range cin {
-		// go func(v int) { cout1 <- v }(v)
+		//go func(v int) { cout1 <- v }(v)
 		cout1 <- v
 		cout2 <- v
 	}
